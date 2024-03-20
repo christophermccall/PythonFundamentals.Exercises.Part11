@@ -2,7 +2,7 @@ import unittest
 import shapes
 
 
-class ShapesTest(unittest.TestCase):
+class TestShapes(unittest.TestCase):
 
     def test_rectangle_area(self):
         # given
