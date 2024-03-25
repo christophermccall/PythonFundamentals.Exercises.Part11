@@ -1,6 +1,6 @@
 import Person
 import unittest
-import AliveStatus as alive
+from AliveStatus import AliveStatus
 import datetime
 
 
@@ -41,9 +41,9 @@ class TestPerson(unittest.TestCase):
     def test_update_status(self):
         # given
         new_person = Person.Person()
-        expected_status = alive.AliveStatus.Alive
+        expected_status = AliveStatus.Alive.name
         # when
-        new_person.update_status(alive.AliveStatus.Alive)
-        actual_status = new_person.Alive.AliveStatus
+        new_person.update_status(AliveStatus.Alive)
+        actual_status = new_person.AliveStatus.name
         # then
         self.assertEquals(expected_status, actual_status)

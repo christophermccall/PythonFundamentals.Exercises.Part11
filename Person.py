@@ -2,13 +2,13 @@ import datetime
 
 
 class Person:
-    import AliveStatus as Alive
+    import AliveStatus
 
     def __init__(self):
+        self.AliveStatus = None
         self.first_name = ''
         self.last_name = ''
         self.datetime = datetime.date(1900, 1, 1)
-        self.Alive.AliveStatus.value = 0
 
     def update_first_name(self, fname):
         self.first_name = fname
@@ -20,7 +20,7 @@ class Person:
         self.datetime = datetime.date(year, month, day)
 
     def update_status(self, status):
-        self.Alive.AliveStatus = status
+        self.AliveStatus = status
 
     def get_first_name(self):
         return self.first_name

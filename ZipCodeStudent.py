@@ -1,23 +1,20 @@
-import Student
-from ZipCodeTrack import *
+
+from Student import *
+
 
 class ZipCodeStudent(Student):
-    def __init__(self,name,track):
-        super().__init__(self,name)
-        self.java = {}
-        self.data ={}
-        self.track = ZipCodeTrack.name
+    def __init__(self, name):
+        super().__init__(self)
+        self.set_student_id()
+        self.name = name
+        self.trk = None
 
+    def get_track(self):
+        return self.trk
 
-    # def get_track(self):
-    #     return self.track
-    #
-    # def choose_track(self,track):
-    #     try:
-    #         super()
-    #         if track is ZipCodeTrack.Data:
-    #             self.data = self.data.update():
-    #
+    def set_track(self, track):
+        self.trk = track
+
 
 
 
